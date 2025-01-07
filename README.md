@@ -5,10 +5,11 @@ Here’s the `README.md` as per your request with the original input format pres
 # Emotion Recognizer Application
 
 ## Project Description
-
-The Emotion Recognizer Application is a Speech Emotion Recognition system that processes audio files to predict emotions such as happiness, sadness, anger, and more from speech. It allows users to either upload an audio file or record one directly through the app. The app integrates with a backend API for storing recordings and performing emotion predictions using a pre-trained model.
-
-The project encompasses the entire pipeline, including data collection, augmentation, feature extraction, and classification using a Convolutional Neural Network (CNN). The workflow begins with uploading and combining datasets, progresses through data preprocessing and feature extraction, and culminates in predicting emotions. The results and insights, including performance metrics, are showcased in a user-friendly mobile application.
+ The Emotion Recognizer Application is a Speech Emotion Recognition system that processes audio files to predict emotions such as happiness, sadness, anger, and more from speech. It allows users to either upload 
+ an audio file or record one directly through the app. The app integrates with a backend API for storing recordings and performing emotion predictions using a pre-trained model.
+ The project encompasses the entire pipeline, including data collection, augmentation, feature extraction, and classification using a Convolutional Neural Network (CNN). The workflow begins with uploading and 
+ combining datasets, progresses through data preprocessing and feature extraction, and culminates in predicting emotions. The results and insights, including performance metrics, are showcased in a user-friendly 
+ mobile application.
 ---
 
 ## Features
