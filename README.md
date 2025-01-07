@@ -4,33 +4,62 @@ Here’s the `README.md` as per your request with the original input format pres
 
 # Emotion Recognizer Application
 
+## Project Description
+
+The **Speech Emotion Recognition** system leverages audio processing and machine learning to identify emotions such as happiness, sadness, anger, and more from speech. This project encompasses the entire pipeline, including data collection, augmentation, feature extraction, and classification using a **Convolutional Neural Network (CNN)**.
+
+The workflow begins with uploading and combining datasets, progresses through data preprocessing and feature extraction, and culminates in predicting emotions along with performance evaluation. The results and insights, including the performance metrics, are showcased in a user-friendly mobile application.
 
 ---
 
-## Project Description:  
-The Speech Emotion Recognition system leverages audio processing and machine learning to identify emotions such as happiness, sadness, anger, and more from speech. This project encompasses the entire pipeline, including data collection, augmentation, feature extraction, and classification using a Convolutional Neural Network (CNN).  
-The workflow begins with uploading and combining datasets, progresses through data preprocessing and feature extraction, and culminates in predicting emotions along with a performance evaluation. The results and insights, including the performance metrics, are showcased in a user-friendly mobile application.
+## Features
+
+- **Audio Upload**: Upload audio files (supported formats: .wav, .mp3).
+- **Audio Recording**: Record audio directly using the app's microphone functionality.
+- **Prediction**: Predict the emotion from the uploaded/recorded audio.
+- **History Management**: View and play back previously uploaded or recorded audio files.
 
 ---
-## features:
-Audio Upload: Upload audio files (supported formats: .wav, .mp3).
-Audio Recording: Record audio directly using the app's microphone functionality.
-Prediction: Predict the emotion from the uploaded/recorded audio.
-History Management: View and play back previously uploaded or recorded audio files.
-```
-## Usage:
-Recording or Uploading Audio
-Record Audio: Click the microphone button to record audio directly in the app.
-Upload Audio: Click the upload button to select and upload an audio file.
-Predicting Emotion
-After recording or uploading an audio file, click the Predict button.
-The emotion prediction result will appear in the message box below the prediction button.
-Viewing History
-Click the History button to view all uploaded or recorded audio files.
-Play a selected audio file from the history.
 
+## Usage
 
-```
+### Recording or Uploading Audio
+- **Record Audio**: Click the microphone button to record audio directly in the app.
+- **Upload Audio**: Click the upload button to select and upload an audio file.
+
+### Predicting Emotion
+- After recording or uploading an audio file, click the **Predict** button.
+- The emotion prediction result will appear in the message box below the prediction button.
+
+### Viewing History
+- Click the **History** button to view all uploaded or recorded audio files.
+- Play a selected audio file from the history.
+
+---
+## Backend Endpoints
+
+### `/upload` [POST]
+Upload an audio file and associate it with a user.
+
+- **Request**: Form data with `user_id` and `file`.
+- **Response**:
+  - Success: `{"message": "File uploaded successfully"}`
+  - Error: `{"error": "Error message"}`
+
+### `/recordings/<user_id>` [GET]
+Retrieve all recordings for a specific user.
+
+- **Response**:
+  - Success: List of recordings with file paths and timestamps.
+  - Error: `{"error": "No recordings found"}`
+
+### `/predict` [POST]
+Predict emotion from an uploaded or recorded audio file.
+
+- **Request**: Form data with `file`.
+- **Response**:
+  - Success: Predicted emotion.
+  - Error: `{"error": "Error message"}`
 
 ## Project Structure:  
 
